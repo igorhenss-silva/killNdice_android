@@ -1,8 +1,6 @@
 package com.igorhenss.killNdice.domain;
 
 import com.igorhenss.killNdice.enums.Alinhamento;
-import com.igorhenss.killNdice.enums.Classe;
-import com.igorhenss.killNdice.enums.Profissao;
 
 public class Entidade {
 
