@@ -1,4 +1,7 @@
 package com.igorhenss.killNdice.enums;
 
 public enum Alinhamento {
+    LEAL_BOM, LEAL_NEUTRO, LEAL_MAU,
+    NEUTRO_BOM, NEUTRO_NEUTRO, NEUTRO_MAU,
+    CAOTICO_BOM, CAOTICO_NEUTRO, CAOTICO_MAU
 }
