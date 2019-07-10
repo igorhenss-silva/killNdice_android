@@ -1,6 +1,7 @@
 package com.igorhenss.killNdice.domain;
 
 import com.igorhenss.killNdice.enums.Alinhamento;
+import com.igorhenss.killNdice.enums.Atributos;
 import com.igorhenss.killNdice.enums.Classe;
 import com.igorhenss.killNdice.enums.Profissao;
 import com.igorhenss.killNdice.enums.Raca;
@@ -10,6 +11,9 @@ public class Personagem extends Entidade {
     Raca raca;
     Classe classe;
     Profissao profissao;
+    Integer nivel;
+
+    // CONSTRUTORES
 
     public Personagem() { }
 
@@ -36,17 +40,51 @@ public class Personagem extends Entidade {
         setRaca(raca);
         setClasse(classe);
         setProfissao(profissao);
+        setNivel(0);
     }
 
-    public void setRaca(Raca raca) {
+    // METODOS
+
+    public void reduzirHitpoints(Integer hitpointsPerdidos) {
+        setHitpoints(hitpoints - hitpointsPerdidos);
+    }
+
+    public void subirDeNivel() {
+        setNivel(nivel + 1);
+    }
+
+    public void aumentarPontosNoAtributo(Integer pontosAdicionados, Atributos atributo) {
+        if (atributo.equals(Atributos.CARISMA)) {
+            setCarisma(carisma + pontosAdicionados);
+        } else if (atributo.equals(Atributos.CONSTITUICAO)) {
+            setConstituicao(constituicao + pontosAdicionados);
+        } else if (atributo.equals(Atributos.DESTREZA)) {
+            setDestreza(destreza + pontosAdicionados);
+        } else if (atributo.equals(Atributos.FORCA)) {
+            setForca(forca + pontosAdicionados);
+        } else if (atributo.equals(Atributos.INICIATIVA)) {
+            setIniciativa(iniciativa + pontosAdicionados);
+        } else if (atributo.equals(Atributos.INTELIGENCIA)) {
+            setInteligencia(inteligencia + pontosAdicionados);
+        }
+    }
+
+    // SETTERS
+
+    private void setRaca(Raca raca) {
         this.raca = raca;
     }
 
-    public void setClasse(Classe classe) {
+    private void setClasse(Classe classe) {
         this.classe = classe;
     }
 
-    public void setProfissao(Profissao profissao) {
+    private void setProfissao(Profissao profissao) {
         this.profissao = profissao;
     }
+
+    private void setNivel(Integer nivel) {
+        this.nivel = nivel;
+    }
+
 }
