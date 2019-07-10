@@ -1,4 +1,4 @@
 package com.igorhenss.killNdice.domain;
 
-public class Personagem {
+public class Personagem extends Entidade {
 }
