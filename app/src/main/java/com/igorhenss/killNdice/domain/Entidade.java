@@ -9,8 +9,6 @@ public class Entidade {
     String nome;
 
     Alinhamento alinhamento;
-    Classe classe;
-    Profissao profissao;
     Integer hitpoints;
 
     Integer carisma;
